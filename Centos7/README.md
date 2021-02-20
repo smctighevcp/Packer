@@ -1,8 +1,8 @@
 # Packer
 
-## Windows Server 2019 Core
+## CentOS 7
  
- This repository contains a Packer build for Windows Server 2019 using the vSphere-ISO builder.
+ This repository contains a Packer build for CentOS 7 using the vSphere-ISO builder.
  These are my updated configurations using HCL rather than JSON following the release of Packer 1.7.
 
 ## Structure
@@ -26,4 +26,4 @@ The Packer configuration picks these up based on the PKR_VAR prefix (you dont ne
 
 *Note the '.' at the end.  This isnt a typo!  This tells Packer to process all the configuration files in the current directory.  This allows you to separate out your config to make it easier to manage and reuse.*
 
-$ packer build -var-file="win2019core.pkrvar.hcl" .
+$ packer build -var-file="centos_7.pkrvar.hcl" .
