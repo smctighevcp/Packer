@@ -1,0 +1,20 @@
+//Defined User Variables
+template_library_Name   = "win-2019-std-gui"
+vm_name                 = "windows-2019-std-gui"
+CPUs                    = "2"
+RAM                     = "2048"
+disk_size               = "61440"
+firmware                = "efi"
+vm_version              = "17"
+notes                   = "Built via Packer"
+guest_os_type           = "windows9Server64Guest"
+ip_wait_timeout         = "1h"
+communicator            = "winrm"
+winrm_timeout             = "30m"
+disk_controller_type    = ["pvscsi"]
+os_iso_path             = "[smt-lab-ds-vsan-01] /Media/windows_server_2019_jan_2021.iso"
+vmtools_iso_path        = "[smt-lab-ds-vsan-01] /Media/VMTools/windows.iso"
+boot_wait               = "6s"
+boot_command            = ["<spacebar>"]
+config_files            = ["config/autounattend.xml","scripts/pvscsi","scripts/install-vm-tools.cmd","scripts/enable-winrm.ps1"]
+script_files            = ["scripts/enable-rdp.cmd", "scripts/disable-tls.ps1"]
