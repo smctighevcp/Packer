@@ -1,6 +1,0 @@
-$env:PKR_VAR_vsphere_user          = "stephan@smt-lab.local"
-$env:PKR_VAR_vsphere_password      = "VMware123!"
-$env:PKR_VAR_winrm_username        = "administrator"
-$env:PKR_VAR_winrm_password        = "VMware123!"
-$env:PKR_VAR_ssh_username          = "linux_user"
-$env:PKR_VAR_ssh_password          = "VMware123!"
