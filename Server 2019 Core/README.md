@@ -26,4 +26,6 @@ The Packer configuration picks these up based on the PKR_VAR prefix (you dont ne
 
 *Note the '.' at the end.  This isnt a typo!  This tells Packer to process all the configuration files in the current directory.  This allows you to separate out your config to make it easier to manage and reuse.*
 
+```
 $ packer build -var-file="win2019core.pkrvar.hcl" .
+```
