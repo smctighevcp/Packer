@@ -151,7 +151,14 @@ build {
   provisioner "powershell" {
     scripts           = var.script_files
   }
-
+  provisioner "windows-update" {
+            search_criteria = "IsInstalled=0"
+            filters = [
+                      "exclude:$_.Title -like '*Preview*'",
+                      "include:$true"
+            ]
+            update_limit = 25
+  }
   post-processor "manifest" {
     output = "output/out-win-2019-std-core.json"
     strip_path = false
@@ -164,7 +171,14 @@ build {
   provisioner "powershell" {
     scripts           = var.script_files
   }
-
+  provisioner "windows-update" {
+            search_criteria = "IsInstalled=0"
+            filters = [
+                      "exclude:$_.Title -like '*Preview*'",
+                      "include:$true"
+            ]
+            update_limit = 25
+  }
   post-processor "manifest" {
     output = "output/out-win-2019-std-gui.json"
     strip_path = false
