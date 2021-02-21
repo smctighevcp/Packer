@@ -17,7 +17,25 @@
       "artifact_id": "windows-2019-std-core",
       "packer_run_uuid": "7e9052ec-3f22-c4dc-b494-d34c9294359a",
       "custom_data": null
+    },
+    {
+      "name": "win-2019-std-core",
+      "builder_type": "vsphere-iso",
+      "build_time": 1613927815,
+      "files": null,
+      "artifact_id": "windows-2019-std-core",
+      "packer_run_uuid": "6bca1cde-d0a6-595f-29b5-ccced4876b37",
+      "custom_data": null
+    },
+    {
+      "name": "win-2019-std-core",
+      "builder_type": "vsphere-iso",
+      "build_time": 1613936074,
+      "files": null,
+      "artifact_id": "windows-2019-std-core",
+      "packer_run_uuid": "1feca535-c975-b5bd-dc2b-bf870079da25",
+      "custom_data": null
     }
   ],
-  "last_run_uuid": "7e9052ec-3f22-c4dc-b494-d34c9294359a"
+  "last_run_uuid": "1feca535-c975-b5bd-dc2b-bf870079da25"
 }
