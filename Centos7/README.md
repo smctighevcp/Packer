@@ -17,9 +17,9 @@
  - ->centos_7.pkrvar.hcl
 
 ## Files
-variables.pkr.hcl - Variable declaration file
- -->centos_7.pkr.hcl - Build file 
- -->centos_7.pkrvar.hcl - User Defined variables file
+- variables.pkr.hcl - Variable declaration file
+- centos_7.pkr.hcl - Build file 
+- centos_7.pkrvar.hcl - User Defined variables file
  
  ## Environmental Variables
 In order to not record sensitive variables in the confguration files, you can make use of environmental variables (This configuration uses user defined variables, see the consolidated configuration for environmental usage).  These are added the the PowerShell session or Shell session before building the template.  This is especially useful should you wish to run the build as part of a workflow and/or feed in secrets from a password management solution. 
