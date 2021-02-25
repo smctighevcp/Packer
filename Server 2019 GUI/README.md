@@ -7,22 +7,22 @@
 
 ## Structure
 
- -->config
-	-->autounattend.xml
- -->output
- -->scripts
-	-->pvscsi
-		-->pcscsi.cat
-		-->pcscsi.inf
-		-->pcscsi.sys
-		-->txtsetup.oem
-	-->disable-tls.ps1
-	-->enable-rdp.cmd
-	-->enable-winrm.ps1
-	-->install_VM_Tools.cmd
- -->variables.pkr.hcl
- -->win2019gui.pkr.hcl
- -->win2019gui.pkrvar.hcl
+ - ->config
+	- ->autounattend.xml
+ - ->output
+ - ->scripts
+	- ->pvscsi
+		- ->pcscsi.cat
+		- ->pcscsi.inf
+		- ->pcscsi.sys
+		- ->txtsetup.oem
+	- ->disable-tls.ps1
+	- ->enable-rdp.cmd
+	- ->enable-winrm.ps1
+	- ->install_VM_Tools.cmd
+ - ->variables.pkr.hcl
+ - ->win2019gui.pkr.hcl
+ - ->win2019gui.pkrvar.hcl
 
 ## Files
 variables.pkr.hcl - Variable declaration file
