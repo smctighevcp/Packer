@@ -171,10 +171,16 @@
                     <Description>Install VMware Tools</Description>
                 </SynchronousCommand>
                 <SynchronousCommand wcm:action="add">
+                    <CommandLine>cmd.exe /c C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -File a:\install-DSCmodule.ps1</CommandLine>
+                    <Order>12</Order>
+                    <Description>Install DSCResource Module</Description>
+                    </SynchronousCommand>
+                <SynchronousCommand wcm:action="add">
                     <CommandLine>cmd.exe /c C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -File a:\enable-winrm.ps1</CommandLine>
                     <Description>Enable WinRM</Description>
                     <Order>99</Order>
-                </SynchronousCommand> 
+                </SynchronousCommand>
+
             </FirstLogonCommands>
             <OOBE>
                 <HideEULAPage>true</HideEULAPage>

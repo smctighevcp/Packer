@@ -1,9 +1,9 @@
 //Defined User Variables
-vsphere_datacenter      = "smt-lab-dc01"
+vsphere_datacenter      = "dc-smt-01"
 vsphere_password        = "VMware123!"
-vsphere_compute_cluster = "smt-lab-cl-mn-01"
-vsphere_portgroup_name  = "smt-lab-vDS_build_20"
-vsphere_datastore       = "smt-lab-ds-vsan-01"
+vsphere_compute_cluster = "cl-vsan-01"
+vsphere_portgroup_name  = "dvPG_Demo_DHCP_149"
+vsphere_datastore       = "ds-vsan-01"
 template_library_Name   = "win-2019-std-core"
 vm_name                 = "windows-2019-std-core"
 CPUs                    = "2"
@@ -18,9 +18,9 @@ winrm_user              = "administrator"
 winrm_password          = "VMware123!"
 winrm_timeout           = "30m"
 disk_controller_type    = ["pvscsi"]
-os_iso_path             = "[smt-lab-ds-vsan-01] /Media/windows_server_2019_jan_2021.iso"
-vmtools_iso_path        = "[smt-lab-ds-vsan-01] /Media/VMTools/windows.iso"
-boot_wait               = "7s"
+os_iso_path             = "[ds-vsan-01] /Media/en_windows_server_2019_updated_march_2021_x64_dvd_ec2626a1.iso"
+vmtools_iso_path        = "[ds-vsan-01] /Media/VMTools/windows.iso"
+boot_wait               = "3s"
 boot_command            = ["<spacebar>"]
-config_files            = ["config/autounattend.xml","scripts/pvscsi","scripts/install-vm-tools.cmd","scripts/enable-winrm.ps1"]
+config_files            = ["config/autounattend.xml","scripts/pvscsi","scripts/install-vm-tools.cmd","scripts/enable-winrm.ps1","scripts/install-DSCmodule.ps1"]
 script_files            = ["scripts/enable-rdp.cmd", "scripts/disable-tls.ps1"]

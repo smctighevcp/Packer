@@ -1,9 +1,9 @@
 //Defined User Variables
-vsphere_datacenter      = "smt-lab-dc01"
+vsphere_datacenter      = "dc-smt-01"
 vsphere_password        = "VMware123!"
-vsphere_compute_cluster = "smt-lab-cl-mn-01"
-vsphere_portgroup_name  = "smt-lab-vDS_build_20"
-vsphere_datastore       = "smt-lab-ds-vsan-01"
+vsphere_compute_cluster = "cl-vsan-01"
+vsphere_portgroup_name  = "dvPG_Demo_DHCP_149"
+vsphere_datastore       = "ds-vsan-01"
 template_library_Name   = "ubu_20_04"
 vm_name                 = "ubuntu20_04"
 CPUs                    = "1"
@@ -17,8 +17,8 @@ ssh_username            = "linux_user"
 ssh_password            = "VMware123!"
 ssh_timeout             = "30m"
 disk_controller_type    = ["pvscsi"]
-os_iso_path             = "[smt-lab-ds-vsan-01] /Media/ubuntu-20.04.1-legacy-server-amd64.iso"
-vmtools_iso_path        = "[smt-lab-ds-vsan-01] /Media/VMTools/linux.iso"
+os_iso_path             = "[ds-vsan-01] /Media/ubuntu-20.04.1-legacy-server-amd64.iso"
+vmtools_iso_path        = "[ds-vsan-01] /Media/VMTools/linux.iso"
 boot_wait               = "12s"
 boot_command            = [
                             "<wait><wait><enter><wait><esc><wait><enter>",

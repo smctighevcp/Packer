@@ -1,7 +1,7 @@
 //  variables.pkr.hcl
 variable "vsphere_server" {
   type    = string
-  default = "smt-lab-vcsa-01.smt-lab.local"
+  default = "vm-vcsa-01.smt-lab.local"
   description = "vCenter Server"
 }
 variable "vsphere_user" {

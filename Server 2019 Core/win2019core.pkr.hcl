@@ -16,7 +16,6 @@ source "vsphere-iso" "win-2019-std-core" {
   datastore            = var.vsphere_datastore
   disk_controller_type = var.disk_controller_type
   firmware             = var.firmware
-  //remove and use http or install oscdimg
   floppy_files         = var.config_files
   folder               = var.vsphere_folder
   guest_os_type        = var.guest_os_type
