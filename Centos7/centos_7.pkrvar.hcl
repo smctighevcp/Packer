@@ -1,9 +1,9 @@
 //Defined User Variables
-vsphere_datacenter      = "smt-lab-dc01"
+vsphere_datacenter      = "dc-smt-01"
 vsphere_password        = "VMware123!"
-vsphere_compute_cluster = "smt-lab-cl-mn-01"
-vsphere_portgroup_name  = "smt-lab-vDS_build_20"
-vsphere_datastore       = "smt-lab-ds-vsan-01"
+vsphere_compute_cluster = "cl-vsan-01"
+vsphere_portgroup_name  = "dvPG_Demo_DHCP_149"
+vsphere_datastore       = "ds-vsan-01"
 template_library_Name   = "cen-7"
 vm_name                 = "centos7"
 CPUs                    = "1"
@@ -17,8 +17,8 @@ ssh_username            = "linux_user"
 ssh_password            = "VMware123!"
 ssh_timeout             = "30m"
 disk_controller_type    = ["pvscsi"]
-os_iso_path             = "[smt-lab-ds-vsan-01] /Media/CentOS-7-x86_64-DVD-2009.iso"
-vmtools_iso_path        = "[smt-lab-ds-vsan-01] /Media/VMTools/linux.iso"
+os_iso_path             = "[ds-vsan-01] /Media/CentOS-7-x86_64-DVD-2009.iso"
+vmtools_iso_path        = "[ds-vsan-01] /Media/VMTools/linux.iso"
 boot_wait               = "15s"
 boot_command            = ["<up><wait><tab><wait> inst.text inst.ks=hd:fd0:/ks.cfg <enter><wait>"]
 config_files            = ["config/ks.cfg"]
