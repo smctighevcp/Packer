@@ -44,7 +44,16 @@
       "artifact_id": "centos7",
       "packer_run_uuid": "f6a9bad1-a0a4-7297-2bad-e679a54bc4dd",
       "custom_data": null
+    },
+    {
+      "name": "centos-7",
+      "builder_type": "vsphere-iso",
+      "build_time": 1616942372,
+      "files": null,
+      "artifact_id": "centos7",
+      "packer_run_uuid": "f0afd34e-40f5-5247-99c4-d1d153056c96",
+      "custom_data": null
     }
   ],
-  "last_run_uuid": "f6a9bad1-a0a4-7297-2bad-e679a54bc4dd"
+  "last_run_uuid": "f0afd34e-40f5-5247-99c4-d1d153056c96"
 }
