@@ -1,1 +1,1 @@
-Install-module PSDSCResources
+Install-module PSDSCResources -Confirm:$false

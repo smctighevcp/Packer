@@ -1,0 +1,14 @@
+{
+  "builds": [
+    {
+      "name": "win-2019-std-core",
+      "builder_type": "vsphere-iso",
+      "build_time": 1617642062,
+      "files": null,
+      "artifact_id": "windows-2019-std-core",
+      "packer_run_uuid": "111f6625-aebf-e2fa-937c-971103b8f9cc",
+      "custom_data": null
+    }
+  ],
+  "last_run_uuid": "111f6625-aebf-e2fa-937c-971103b8f9cc"
+}
