@@ -35,7 +35,16 @@
       "artifact_id": "centos8",
       "packer_run_uuid": "5a8a9a49-b72f-0cd6-3285-bf341f9eaca1",
       "custom_data": null
+    },
+    {
+      "name": "centos-8",
+      "builder_type": "vsphere-iso",
+      "build_time": 1619555720,
+      "files": null,
+      "artifact_id": "centos8",
+      "packer_run_uuid": "008bf33e-6146-3990-8cbe-17b664216f05",
+      "custom_data": null
     }
   ],
-  "last_run_uuid": "5a8a9a49-b72f-0cd6-3285-bf341f9eaca1"
+  "last_run_uuid": "008bf33e-6146-3990-8cbe-17b664216f05"
 }

@@ -8,7 +8,61 @@
       "artifact_id": "windows-2019-std-core",
       "packer_run_uuid": "111f6625-aebf-e2fa-937c-971103b8f9cc",
       "custom_data": null
+    },
+    {
+      "name": "win-2019-std-core",
+      "builder_type": "vsphere-iso",
+      "build_time": 1618318363,
+      "files": null,
+      "artifact_id": "windows-2019-std-core",
+      "packer_run_uuid": "88cf928d-6852-4161-f02f-db4bc095d54c",
+      "custom_data": null
+    },
+    {
+      "name": "win-2019-std-core",
+      "builder_type": "vsphere-iso",
+      "build_time": 1618323446,
+      "files": null,
+      "artifact_id": "windows-2019-std-core",
+      "packer_run_uuid": "d9040c7e-f853-604e-e88c-4333a4a7c3b2",
+      "custom_data": null
+    },
+    {
+      "name": "win-2019-std-core",
+      "builder_type": "vsphere-iso",
+      "build_time": 1618328879,
+      "files": null,
+      "artifact_id": "windows-2019-std-core",
+      "packer_run_uuid": "ad518329-861e-b9cd-c4a6-59105193a335",
+      "custom_data": null
+    },
+    {
+      "name": "win-2019-std-core",
+      "builder_type": "vsphere-iso",
+      "build_time": 1618331413,
+      "files": null,
+      "artifact_id": "windows-2019-std-core",
+      "packer_run_uuid": "167a323b-c9ca-e8b2-f641-d16bb6250693",
+      "custom_data": null
+    },
+    {
+      "name": "win-2019-std-core",
+      "builder_type": "vsphere-iso",
+      "build_time": 1619019901,
+      "files": null,
+      "artifact_id": "windows-2019-std-core",
+      "packer_run_uuid": "e66384de-4024-6d8b-8821-27ed0dacbe8f",
+      "custom_data": null
+    },
+    {
+      "name": "win-2019-std-core",
+      "builder_type": "vsphere-iso",
+      "build_time": 1619554024,
+      "files": null,
+      "artifact_id": "windows-2019-std-core",
+      "packer_run_uuid": "7e2ec65a-0445-972f-c7c8-063d8be615c2",
+      "custom_data": null
     }
   ],
-  "last_run_uuid": "111f6625-aebf-e2fa-937c-971103b8f9cc"
+  "last_run_uuid": "7e2ec65a-0445-972f-c7c8-063d8be615c2"
 }

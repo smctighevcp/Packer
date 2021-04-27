@@ -35,7 +35,25 @@
       "artifact_id": "windows-2019-std-gui",
       "packer_run_uuid": "9e896e3a-8ea5-a45e-983b-49a7054ca664",
       "custom_data": null
+    },
+    {
+      "name": "win-2019-std-gui",
+      "builder_type": "vsphere-iso",
+      "build_time": 1618519543,
+      "files": null,
+      "artifact_id": "windows-2019-std-gui",
+      "packer_run_uuid": "0c24076e-7309-56a0-252c-7462050b4217",
+      "custom_data": null
+    },
+    {
+      "name": "win-2019-std-gui",
+      "builder_type": "vsphere-iso",
+      "build_time": 1619021906,
+      "files": null,
+      "artifact_id": "windows-2019-std-gui",
+      "packer_run_uuid": "3663aaa8-26f5-5f65-cf35-75d9e37df2aa",
+      "custom_data": null
     }
   ],
-  "last_run_uuid": "9e896e3a-8ea5-a45e-983b-49a7054ca664"
+  "last_run_uuid": "3663aaa8-26f5-5f65-cf35-75d9e37df2aa"
 }

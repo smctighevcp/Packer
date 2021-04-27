@@ -30,5 +30,5 @@ boot_command            = [
                             " -- <wait>",
                             "<enter><wait>"
                         ]
-config_files            = ["config/preseed.cfg"]
+config_files            = []
 script_files            = ["scripts/update.sh"]
