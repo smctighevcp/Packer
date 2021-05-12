@@ -1,0 +1,14 @@
+{
+  "builds": [
+    {
+      "name": "ubuntu20_04",
+      "builder_type": "vsphere-iso",
+      "build_time": 1619526328,
+      "files": null,
+      "artifact_id": "ubuntu20_04",
+      "packer_run_uuid": "673d3133-ab31-76e9-c8e0-279e2f424638",
+      "custom_data": null
+    }
+  ],
+  "last_run_uuid": "673d3133-ab31-76e9-c8e0-279e2f424638"
+}
