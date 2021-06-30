@@ -71,7 +71,16 @@
       "artifact_id": "windows-2019-std-core",
       "packer_run_uuid": "013578ba-56d4-0147-f0aa-0224242dffe5",
       "custom_data": null
+    },
+    {
+      "name": "win-2019-std-core",
+      "builder_type": "vsphere-iso",
+      "build_time": 1624887808,
+      "files": null,
+      "artifact_id": "windows-2019-std-core",
+      "packer_run_uuid": "9602a56c-3b2f-0e24-4e71-59ea655497c5",
+      "custom_data": null
     }
   ],
-  "last_run_uuid": "013578ba-56d4-0147-f0aa-0224242dffe5"
+  "last_run_uuid": "9602a56c-3b2f-0e24-4e71-59ea655497c5"
 }

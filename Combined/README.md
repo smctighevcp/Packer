@@ -28,9 +28,13 @@
         - ->install-psmodules.ps1
         - ->install_VM_Tools.cmd
         - ->psrepo_nuget.ps1
+ - ->build.pkr.hcl
  - ->variables.pkr.hcl
- - ->win2019core.pkr.hcl
+ - ->centos_8.pkrvar.hcl
+ - ->ubuntu20_04.pkrvar.hcl
+ - ->win2019gui.pkrvar.hcl
  - ->win2019core.pkrvar.hcl
+ - ->environment_vars
 
 ## Files
 - variables.pkr.hcl - Variable declaration file
