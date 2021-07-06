@@ -1,7 +1,6 @@
 source "vsphere-iso" "win-2019-std-core" {
   CPUs            = var.CPUs
   RAM             = var.RAM
-  RAM_reserve_all = var.ram_reserve_all
   boot_command    = var.boot_command
   boot_order      = var.boot_order
   boot_wait       = var.boot_wait
