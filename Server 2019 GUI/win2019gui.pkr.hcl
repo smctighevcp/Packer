@@ -1,7 +1,6 @@
 source "vsphere-iso" "win-2019-std-gui" {
   CPUs            = var.CPUs
   RAM             = var.RAM
-  RAM_reserve_all = var.ram_reserve_all
   boot_command    = var.boot_command
   boot_order      = var.boot_order
   boot_wait       = var.boot_wait
@@ -21,7 +20,6 @@ source "vsphere-iso" "win-2019-std-gui" {
   guest_os_type        = var.guest_os_type
   insecure_connection  = var.insecure_connection
   iso_paths = [var.os_iso_path,var.vmtools_iso_path]
-  ip_wait_timeout      = var.ip_wait_timeout
   network_adapters {
     network      = var.vsphere_portgroup_name
     network_card = var.network_card
