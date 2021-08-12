@@ -1,6 +1,6 @@
 # Packer
 
-## Windows Server 2019 Core
+## Windows Server 2019 Core v2
 
  This repository contains a Packer build for Windows Server 2019 using the vSphere-ISO builder.
  These are my updated configurations using HCL rather than JSON following the release of Packer 1.7.
@@ -15,10 +15,8 @@
 		- ->pcscsi.inf
 		- ->pcscsi.sys
 		- ->txtsetup.oem
-	- ->disable-tls.ps1
-	- ->enable-rdp.cmd
-	- ->enable-winrm.ps1
-	- ->install_VM_Tools.cmd
+	- ->os-configuration.ps1
+	- ->package-installations.ps1
  - ->variables.pkr.hcl
  - ->win2019core.pkr.hcl
  - ->win2019core.pkrvar.hcl

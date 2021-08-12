@@ -1,3 +1,7 @@
+#OS Configuration
+#This file contains any OS configuration options along with the installation of VMTools and Enabling of WinRM.
+#All configuration in this file takes place during the OS installation - referenced in autounattend.xml
+
 #Install VMTools
 Start-Process "E:\setup64.exe" -ArgumentList "/s /v /qn REBOOT=R" -Wait
 
