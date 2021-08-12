@@ -7,6 +7,7 @@
 #Download and Extract Media
 try {
     Write-Host "Downloading Apps and Agents Media (Zip) from Packer Server... "
+    #Use the IP of the host you are running Packer from.
     Invoke-WebRequest -Uri "http://10.200.15.15:8000/installs.zip" -OutFile C:\temp\installs.zip -UseBasicParsing  -ErrorVariable result
     Write-Host "Downloaded Successfully"
     Write-Host "Extracting Zip to C:\temp"
