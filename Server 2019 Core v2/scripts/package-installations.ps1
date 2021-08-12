@@ -1,6 +1,6 @@
 #Package Installations
 #This file downloads a ZIP file from the Packer Host, extracts the content and installs the applications or agents.
-#There is a simple installation section as well as a section that can be used with commonly packages apps (via the App Deployment Toolkit for example).
+#There is a simple installation section as well as a section that can be used with commonly packaged apps (via the App Deployment Toolkit for example).
 #It then removes all the media from the server.
 
 
