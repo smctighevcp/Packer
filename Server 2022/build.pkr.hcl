@@ -20,6 +20,7 @@ source "vsphere-iso" "win-2022-std-core" {
   guest_os_type        = var.guest_os_type
   insecure_connection  = var.insecure_connection
   iso_paths            = [var.os_iso_path,var.vmtools_iso_path]
+  remove_cdrom         = var.remove_cdrom
   network_adapters {
     network      = var.vsphere_portgroup_name
     network_card = var.network_card
@@ -65,6 +66,7 @@ source "vsphere-iso" "win-2022-std-gui" {
   guest_os_type        = var.guest_os_type
   insecure_connection  = var.insecure_connection
   iso_paths            = [var.os_iso_path,var.vmtools_iso_path]
+  remove_cdrom         = var.remove_cdrom
   network_adapters {
     network      = var.vsphere_portgroup_name
     network_card = var.network_card

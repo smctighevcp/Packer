@@ -112,6 +112,11 @@ variable "boot_order" {
   type    = string
   default = "disk,cdrom"
 }
+variable "remove_cdrom" {
+  type    = bool
+  default = true
+  description = "Removed the CDROM drives from the template"
+}
 variable "communicator" {
   type = string
   default = "winrm"
