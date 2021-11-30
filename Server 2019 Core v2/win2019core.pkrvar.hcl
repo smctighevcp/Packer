@@ -2,7 +2,7 @@
 vsphere_datacenter      = "dc-smt-01"
 vsphere_password        = "VMware123!"
 vsphere_compute_cluster = "cl-vsan-01"
-vsphere_portgroup_name  = "dvPG_Demo_DHCP_149"
+vsphere_portgroup_name  = "dvPG-Build-Network"
 vsphere_datastore       = "ds-vsan-01"
 template_library_Name   = "win-2019-std-core"
 vm_name                 = "windows-2019-std-core"
@@ -19,6 +19,6 @@ http_directory          = "E:\\Media/"
 http_port_max           = 8000
 boot_wait               = "3s"
 boot_command            = ["<spacebar>"]
-config_files            = ["config/autounattend.xml","scripts/pvscsi","scripts/install-vm-tools.cmd","scripts/enable-winrm.ps1","scripts/os-configuration.ps1"]
+config_files            = ["config/autounattend.xml","scripts/os-configuration.ps1"]
 script_files            = ["scripts/package-installations.ps1"]
 cleanup                 = ["scripts/cleanup.ps1"]

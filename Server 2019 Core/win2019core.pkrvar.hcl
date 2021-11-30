@@ -2,7 +2,7 @@
 vsphere_datacenter      = "dc-smt-01"
 vsphere_password        = "VMware123!"
 vsphere_compute_cluster = "cl-vsan-01"
-vsphere_portgroup_name  = "dvPG_Demo_DHCP_149"
+vsphere_portgroup_name  = "dvPG-Build-Network"
 vsphere_datastore       = "ds-vsan-01"
 template_library_Name   = "win-2019-std-core"
 vm_name                 = "windows-2019-std-core"

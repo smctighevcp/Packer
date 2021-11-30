@@ -3,7 +3,7 @@
 #All configuration in this file takes place during the OS installation - referenced in autounattend.xml
 
 #Install VMTools
-Start-Process "E:\setup64.exe" -ArgumentList "/s /v /qn REBOOT=R" -Wait
+Start-Process "E:\setup64.exe" -ArgumentList "/S /v /qn REBOOT=R ADDLOCAL=ALL" -Wait
 
 #Disable TLS 1.0
 new-item -path "HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols" -Name "TLS 1.0"

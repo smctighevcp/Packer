@@ -1,2 +1,2 @@
 #Remove Windows Proxy
-#netsh winhttp reset proxy
+netsh winhttp reset proxy
