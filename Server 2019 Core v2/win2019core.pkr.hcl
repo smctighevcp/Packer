@@ -60,8 +60,4 @@ build {
     provisioner "powershell" {
     scripts           = var.cleanup
   }
-  post-processor "manifest" {
-    output = "output/out-win-2019-std-core.json"
-    strip_path = false
-  }
 }
