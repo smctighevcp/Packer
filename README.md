@@ -49,15 +49,6 @@ $ packer build -var-file="win2019core.pkrvar.hcl" .
 Q: Quit
 Please make a selection:
 ```
-
-## Change Log
-### 08/01/2022
-* Added an improved combind build (vm-templates).
-* Windows Server Core and Deskop Expirence template builds added (via combined vm-templates configuration).
-* vm-templates - now loads PVSCSI Drivers via the mounted VMTools media for Windows Builds.
-* vm-templates - Reduced repeat files and code.
-* vm-templates - Improved and more consistent script files in configuration.
-
 ## Things to Replace
 
 - autounattended.xml : ProductKey - VDYBN-27WPP-V4HQT-9VMD4-VMK7H (KMS Client Key) - If you are not using a KMS to licence your OS, change this as appropriate.
@@ -68,3 +59,11 @@ Please make a selection:
 - rhel.cfg : Passwords ()rootpw and user) - Change as required, currently a generic value in plain text.
 - os-configuration.sh : Change the logon banner to suit.
 - variables.pkr.hcl : Multiple - Change all default values as required.
+
+## Change Log
+### 08/01/2022
+* Added an improved combind build (vm-templates).
+* Windows Server Core and Deskop Expirence template builds added (via combined vm-templates configuration).
+* vm-templates - now loads PVSCSI Drivers via the mounted VMTools media for Windows Builds.
+* vm-templates - Reduced repeat files and code.
+* vm-templates - Improved and more consistent script files in configuration.
