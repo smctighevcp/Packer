@@ -2,7 +2,7 @@
 
  This repository contains packer builds for multiple operating systems using the vSphere-ISO builder.  These are my updated configurations using HCL rather than JSON following the release of Packer 1.7.
 
- There are individual builds which are referenced from my blog series (Link) and use some older techniques.  These are located in the OS specific folders.
+ There are individual builds which are referenced from my blog series [Link](https://stephanmctighe.com/2021/06/15/getting-started-with-packer-to-create-vsphere-templates-part-1/) and use some older techniques.  These are located in the OS specific folders.
 
  The vm-templates folder contains a combined configuration that uses some newer techniques with multiple improvements, as well as better reuse of the code, making it easier to maintain.  It currently has a template configuration for Windows Server 2022 (Core & Desktop), Photon and RHEL.
 
