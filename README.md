@@ -4,7 +4,7 @@
 
  There are individual builds which are referenced from my blog series (Link) and use some older techniques.  These are located in the OS specific folders.
 
- The vm-templates folder contains a combined configuration that uses some newer techniques with multiple improvements, as well as better reuse of the code, making it easier to maintain.  I currently has a template configuration for Windows Server 2022, Photon and RHEL.
+ The vm-templates folder contains a combined configuration that uses some newer techniques with multiple improvements, as well as better reuse of the code, making it easier to maintain.  It currently has a template configuration for Windows Server 2022 (Core & Desktop), Photon and RHEL.
 
 
 ## Files
@@ -57,3 +57,14 @@ Please make a selection:
 * vm-templates - now loads PVSCSI Drivers via the mounted VMTools media for Windows Builds.
 * vm-templates - Reduced repeat files and code.
 * vm-templates - Improved and more consistent script files in configuration.
+
+## Things to Replace
+
+- autounattended.xml : ProductKey - VDYBN-27WPP-V4HQT-9VMD4-VMK7H (KMS Client Key) - If you are not using a KMS to licence your OS, change this as appropriate.
+- autounattended.xml : FullName - Change as required.
+- autounattended.xml : Organisation - Change as required.
+- autounattended.xml : AdministratorPassword - Change as required, currently a generic value in plain text.
+- photon-4.json : Passwords (including in the post install section) - Change as required, currently a generic value in plain text.
+- rhel.cfg : Passwords ()rootpw and user) - Change as required, currently a generic value in plain text.
+- os-configuration.sh : Change the logon banner to suit.
+- variables.pkr.hcl : Multiple - Change all default values as required.
