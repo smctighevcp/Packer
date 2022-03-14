@@ -1,2 +1,7 @@
-.DS_Store
-output/out-win-2019-std-core.json
+# Cache objects
+packer_cache/
+
+# Crash log
+crash.log
+
+#Other
