@@ -17,7 +17,7 @@
 
 ## Change Log
 ### 08/01/2022
-* Added an improved combind build (vm-templates).
+* Added an improved combined build (vm-templates).
 * Windows Server Core and Deskop Expirence template builds added (via combined vm-templates configuration).
 * vm-templates - now loads PVSCSI Drivers via the mounted VMTools media for Windows Builds.
 * vm-templates - Reduced repeat files and code.
