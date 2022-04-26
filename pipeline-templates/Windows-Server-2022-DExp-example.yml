@@ -1,0 +1,58 @@
+#Windows Server 2022 Desktop
+ jobs:
+   - job: Windows_Server_2022_Desktop
+     pool:
+      name: On-Prem Agent Pool
+     timeoutInMinutes: 120
+     variables:
+      - group: Notifications
+     steps:
+        - task: AzureKeyVault@2
+          displayName: Aquiring Secrets
+          inputs:
+            azureSubscription: 'identity-management-connectivity(*******************************)'
+            KeyVaultName: 'kv-vault-main'
+            SecretsFilter: 'DevOpsGitHubPAT, vSphereAdmin, vSphereAdminUser, GuestLocalAdmin, GuestLocalAdminUser, PipelineNotificationsTenantID, PipelineNotificationsAppID, PipelineNotificationsAppSecret'
+            RunAsPreJob: false
+        - task: PowerShell@2
+          displayName: Creating Environment Variables and Initiating Build
+          inputs:
+            targetType: 'inline'
+            script: |
+              $env:PKR_VAR_env_vsphere_username = "$(vSphereAdminUser)"
+              $env:PKR_VAR_env_vsphere_password = "$(vSphereAdmin)"
+              $env:PKR_VAR_env_communicator_username = "$(GuestLocalAdminUser)"
+              $env:PKR_VAR_env_communicator_password = "$(GuestLocalAdmin)"
+
+                #change to Packer working directory
+                Set-Location $(System.DefaultWorkingDirectory)\Packer\pipeline-templates\
+
+                #Specify the Build
+                $BuildVersion = "$(BuildVersion)"
+                $BuildDate = get-date -f yyyyMMdd-HHmm
+
+                #Enable and set logging location
+                $env:PACKER_LOG = 1
+                $env:PACKER_LOG_PATH = "C:\Packer-Logs\packerlog-$($BuildVersion)-$BuildDate.txt"
+
+                #Initialise template!
+                packer init build.pkr.hcl
+
+                #Build template!
+                packer build --only vsphere-iso.win-2022-std-dexp -var-file="vars/windows-server-2022.pkrvars.hcl" .
+
+                #Build Email Content
+                $EmailContent = Get-Content "C:\Packer-Logs\packerlog-$($BuildVersion)-$BuildDate.txt"
+        - task: PowerShell@2
+          displayName: Sending Email Notifications
+          inputs:
+            targetType: 'inline'
+            script: |
+                $EmailBody = '<HTML><H1><font color = "#286334"> Notification from Packer Build Pipeline</font></H1><BODY><font color =#99000 face=Microsoft Tai le><p>Please Review the logfile below and take appropirate action if required.</p><p>$(BuildVersion)</p><p>`"$($EmailContent)`"</p></font>'
+                      $Token = "$(DevOpsGitHubPAT)"
+                      $Headers = @{
+                      accept = "application/vnd.github.v3.raw"
+                      authorization = "Token " + $Token}
+                      $SMTPCode = Invoke-WebRequest "https://raw.githubusercontent.com/smctighevcp/**************/main/****************/Send-Email.ps1?$Token" -Headers $Headers -UseBasicParsing
+                      Invoke-Expression $($SMTPCode.Content)
+                      Send-Email -TenantId "$(PipelineNotificationsTenantID)" -AppId "$(PipelineNotificationsAppID)" -AppSecret "$(PipelineNotificationsAppSecret)" -From "$(From)" -Recipient "$(Recipient)" -Subject "$(Subject)" -EmailBody $EmailBody
