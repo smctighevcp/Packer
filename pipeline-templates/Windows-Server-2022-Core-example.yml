@@ -11,7 +11,7 @@
           displayName: Aquiring Secrets
           inputs:
             azureSubscription: 'identity-management-connectivity(********************************)'
-            KeyVaultName: 'kv-sthc-main'
+            KeyVaultName: 'kv-vault-main'
             SecretsFilter: 'DevOpsGitHubPAT, vSphereAdmin, vSphereAdminUser, GuestLocalAdmin, GuestLocalAdminUser, PipelineNotificationsTenantID, PipelineNotificationsAppID, PipelineNotificationsAppSecret'
             RunAsPreJob: false
         - task: PowerShell@2
