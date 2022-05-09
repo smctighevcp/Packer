@@ -20,9 +20,11 @@ jobs:
       - group: Notifications
 
     steps:
+    - checkout: self
+    - checkout: ps-code-snippets
     - task: PowerShell@2
-      displayName: Sending Email Notifications
+      displayName: List content
       inputs:
         targetType: "inline"
         script: | 
-          Get-childItem $(Build.SourcesDirectory)
+          Get-childItem $(Build.SourcesDirectory)/
