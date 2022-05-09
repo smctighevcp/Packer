@@ -9,17 +9,21 @@ resources:
       endpoint: smctighevcp
       name: smctighevcp/ps-code-snippets
       ref: main
-trigger:
-- main
+pr: none
+trigger: none
+jobs:
+  - job: Multi-Repo-Testing
+    pool:
+      name: TSHC On-Prem Agent Pool
+    timeoutInMinutes: 120
+    variables:
+      - group: Notifications
 
-pool:
-  vmImage: ubuntu-latest
-
-steps:
-- task: PowerShell@2
-  displayName: Sending Email Notifications
-  inputs:
-    targetType: "inline"
-    script: | 
-    Get-childItem $(Build.SourcesDirectory)
+    steps:
+    - task: PowerShell@2
+      displayName: Sending Email Notifications
+      inputs:
+        targetType: "inline"
+        script: | 
+        Get-childItem $(Build.SourcesDirectory)
 
