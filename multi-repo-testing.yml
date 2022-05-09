@@ -27,4 +27,7 @@ jobs:
       inputs:
         targetType: "inline"
         script: | 
-          Get-childItem $(Build.SourcesDirectory)/
+          #Build Email Content
+            $EmailBody = '<HTML><H1><font color = "#286334"> Notification from Packer Build Pipeline</font></H1><BODY><font color =#99000 face=Microsoft Tai le><p>Please Review the logfile below and take appropirate action if required.</p><p>$(BuildVersion)</p></font><p><img src="https://stephanmctighe.files.wordpress.com/2022/03/thesmallhumancloud-logo.png" width="100" height="36"></p>'
+            .\$(Build.SourcesDirectory)\ps-code-snippets\functions\send-email.ps1
+            Send-Email -TenantId "$(PipelineNotificationsTenantID)" -AppId "$(PipelineNotificationsAppID)" -AppSecret "$(PipelineNotificationsAppSecret)" -From "$(From)" -Recipient "$(Recipient)" -Subject "$(Subject)" -EmailBody $EmailBody
