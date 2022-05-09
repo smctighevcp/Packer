@@ -12,7 +12,7 @@ resources:
 pr: none
 trigger: none
 jobs:
-  - job: Multi-Repo-Testing
+  - job: Multi_Repo_Testing
     pool:
       name: TSHC On-Prem Agent Pool
     timeoutInMinutes: 120
