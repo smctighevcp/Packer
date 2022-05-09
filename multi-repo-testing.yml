@@ -25,5 +25,4 @@ jobs:
       inputs:
         targetType: "inline"
         script: | 
-        Get-childItem $(Build.SourcesDirectory)
-
+          Get-childItem $(Build.SourcesDirectory)
