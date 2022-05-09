@@ -1,0 +1,25 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+resources:
+  repositories:
+    - repository: ps-code-snippets
+      type: github
+      endpoint: smctighevcp
+      name: smctighevcp/ps-code-snippets
+      ref: main
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: PowerShell@2
+  displayName: Sending Email Notifications
+  inputs:
+    targetType: "inline"
+    script: | 
+    Get-childItem $(Build.SourcesDirectory)
+
